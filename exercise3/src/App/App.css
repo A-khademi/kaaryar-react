@@ -1,0 +1,11 @@
+.chatBox{
+    width: 60rem;
+    height: 500px;
+    margin-top: 5rem;
+    display: flex;
+    align-items:flex-end ;
+    background-color:#E0E9E9;
+    color: brown;
+    overflow-y: scroll;
+    border-radius: 4px;
+}
