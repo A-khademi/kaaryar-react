@@ -1,6 +1,8 @@
 .SectionMain{
     background-color: white;
-    border-radius: 5px;
-    max-width: 920px;
-    height: 90vh ;
+    border-radius: 24px;
+    width:920px;
+    height: 500px ;
+    box-shadow: 5px 5px 10px #09d4a1c7;
+    display: flex;
 }
