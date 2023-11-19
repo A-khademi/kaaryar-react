@@ -1,3 +1,4 @@
-/* .list{
-    color: antiquewhite;
-} */
+.list{
+    display: flex;
+    flex-direction: column;
+}

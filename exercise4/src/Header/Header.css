@@ -1,19 +1,15 @@
-.Container{
-    width:100%;
-    margin: 10px;
-    overflow-y: scroll;
+.Container {
+  width: 100%;
+  margin: 10px;
 }
-.Title{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    font-weight: bolder;
-    font-size:28px;
+.Title,
+.Value {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
 }
-.Value{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
+.Title {
+  font-weight: bolder;
+  font-size: 28px;
 }

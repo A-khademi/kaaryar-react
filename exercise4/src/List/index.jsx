@@ -1,4 +1,5 @@
-import "./list.css"
+
+import "./list.css";
 
 function List({ orders }) {
   const orderSell = orders.filter((order) => {
@@ -7,11 +8,17 @@ function List({ orders }) {
   const orderBuy = orders.filter((order) => {
     return order.type === "buy";
   });
+
   return (
-    <div>
+    <div className="list">
       {orderSell.map((order) => (
-        <div className="list">
-        <p>{orderSell.price}</p>
+        <div className="price" key={order.price}>
+          <p>{order.price}</p>
+        </div>
+      ))}
+      {orderBuy.map((order) => (
+        <div className="price" key={order.price}>
+          <p>{order.price}</p>
         </div>
       ))}
     </div>
