@@ -1,4 +1,5 @@
 
+import OrderItem from "../OrderItem";
 import "./list.css";
 
 function List({ orders }) {
@@ -21,6 +22,7 @@ function List({ orders }) {
           <p>{order.price}</p>
         </div>
       ))}
+      <OrderItem />
     </div>
   );
 }
