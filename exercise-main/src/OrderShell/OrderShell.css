@@ -1,0 +1,21 @@
+.OrderShell {
+    width: 80%;
+    max-width: 920px;
+    height: 350px;
+    margin: auto; /* Centering horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(109, 70, 70, 0.1); /* Adjust shadow as needed */
+    border-radius: 24px;
+    padding: 10px;
+  }
+
+  /* Responsive Styles */
+  /* @media (max-width: 920px) {
+    .OrderShell {
+      width: 100%;
+    }
+  } */
+  
