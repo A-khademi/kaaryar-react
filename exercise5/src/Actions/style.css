@@ -1,0 +1,42 @@
+.Actions {
+  width: 100%;
+  padding: 16px;
+  border-top: 2px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+.primary,
+.secondary {
+  height: 48px;
+  width: 180px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-align: center;
+  margin: 0 16px;
+}
+button {
+  all: initial;
+}
+.primary {
+  background-color: #f84546;
+  border-radius: 2px;
+}
+.primary:hover {
+  box-shadow: 0px 4px 12px 0px #f84546;
+}
+.secondary:hover {
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+}
+.secondary > button {
+  color: #f84546;
+  cursor: pointer;
+}
+.primary > button {
+  color: white;
+  cursor: pointer;
+}
