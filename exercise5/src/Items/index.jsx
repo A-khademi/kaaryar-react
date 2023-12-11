@@ -1,20 +1,9 @@
 import "./style.css";
-import "../works.json";
+import Works from "../works/Works.jsx";
 function Items() {
   return (
     <div className="items">
-      <div className="item">
-        <ul>
-          <li>
-            <div className="works">
-              <span>job</span>
-            </div>
-            <div className="button">
-              <span>X</span>
-            </div>
-          </li>
-        </ul>
-      </div>
+      <Works/>
     </div>
   );
 }

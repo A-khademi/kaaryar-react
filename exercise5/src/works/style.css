@@ -1,0 +1,43 @@
+.item {
+    width: 100%;
+    min-height: 32px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 12px 8px;
+  }
+  .works {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    text-align: center;
+  }
+  .job{
+    width: 250px;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    text-align: right;
+    font-family: Vazirmatn UI;
+  }
+  .job:hover {
+      white-space:wrap;
+    }
+  .button {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 100%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .button:hover {
+    cursor: pointer;
+  }
+  .item:hover {
+    background-color: #f84546;
+    color: white;
+    transition: background-color 1s ease-out;
+  }
+  
