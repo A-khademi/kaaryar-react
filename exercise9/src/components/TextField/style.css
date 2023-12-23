@@ -1,0 +1,26 @@
+.text-field{
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+.text-field__label{
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+.text-field__controller{
+    border-radius: 4px;
+    padding: 4px 8px;
+    border: none;
+    min-height: 32px;
+    font-size: 18px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+.text-field__controller:focus{
+    outline: none;
+    box-shadow: 0 0 8px rgb(9, 159, 185);
+}
+.text-field__error{
+    font-size: 12px;
+    color: red;
+    margin-top: 8px;
+}

@@ -1,0 +1,15 @@
+.app{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #EEE;
+}
+.form{
+    width: 100%;
+    max-width: 400px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
