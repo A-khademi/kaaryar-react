@@ -10,7 +10,7 @@ import skills from "./skills.json";
 
 const fields={
   fullName:{
-    validators:[isRequired,isFarsi]
+    
   }
 }
 function App() {
