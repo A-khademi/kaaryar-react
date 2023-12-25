@@ -4,7 +4,6 @@ function RadioGroupField({
   value,
   onChange,
   errors = [],
-//   name,
   label,
 }) {
  

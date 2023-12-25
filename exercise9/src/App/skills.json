@@ -1,0 +1,14 @@
+[
+    {
+        "value": "html",
+        "label": "HTML"
+    },
+    {
+        "value": "css",
+        "label": "CSS"
+    },
+    {
+        "value": "js",
+        "label": "JavaScript"
+    }
+]

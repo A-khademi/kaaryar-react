@@ -3,63 +3,100 @@ import TextField from "../components/TextField";
 import RadioGroupField from "../components/RadioGroupField";
 import CheckboxGroupField from "../components/CheckboxGroupField";
 import SelectField from "../components/SelectField";
+import { useState } from "react";
+import genders from "./genders.json";
+import citys from "./citys.json";
+import skills from "./skills.json";
 function App() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    gender: "",
+    skills: [],
+    city: "",
+  });
+
+  function getChangeHandler(key) {
+    return function handleChange(newValue) {
+      setFormData({
+        ...formData,
+        [key]: newValue,
+      });
+    };
+  }
+
+  function handleSkillsChange(newSkill) {
+    const isOptionSelected = formData.skills.includes(newSkill);
+    let newSkills = [];
+    if (isOptionSelected) {
+      newSkills = formData.skills.filter((skill) => skill !== newSkill);
+    } else {
+      newSkills = [...formData.skills, newSkill];
+    }
+    setFormData({
+      ...formData,
+      skills: newSkills,
+    });
+  }
+
+  console.log({ formData });
   return (
     <section className="app">
       <form className="form">
         <TextField
-          lable="نام و نام خانوادگی"
-          onChange={() => {}}
+          label="نام و نام خانوادگی"
           id="fullName"
+          value={formData.fullName}
+          onChange={getChangeHandler("fullName")}
         />
-        <TextField lable="ایمیل" onChange={() => {}} id="email" type="email" />
         <TextField
-          lable="رمز عبور"
-          onChange={() => {}}
+          label="ایمیل"
+          onChange={getChangeHandler("email")}
+          id="email"
+          value={formData.email}
+          type="email"
+        />
+        <TextField
+          label="رمز عبور"
+          value={formData.password}
+          onChange={getChangeHandler("password")}
           id="password"
           type="password"
         />
         <TextField
-          lable="تکرار رمز عبور"
-          onChange={() => {}}
+          label="تکرار رمز عبور"
+          value={formData.confirmPassword}
+          onChange={getChangeHandler("confirmPassword")}
           id="confirmPassword"
           type="password"
         />
         <RadioGroupField
-          options={[
-            { value: "male", lable: "مرد" },
-            { value: "female", lable: "زن" },
-            { value: "prefer-not-to-say", lable: "نامشخص" },
-          ]}
-          lable="جنسیت"
-          onChange={() => {}}
-          value="male"
+          options={genders}
+          label="جنسیت"
+          onChange={getChangeHandler("gender")}
+          value={formData.gender}
           errors={[]}
           name="gender"
         />
         <CheckboxGroupField
-          options={[
-            { value: "html", lable: "HTML" },
-            { value: "css", lable: "CSS" },
-            { value: "js", lable: "JavaScript" },
-          ]}
-          lable="مهارت ها"
-          onChange={() => {}}
-          value={["js", "css"]}
+          options={skills}
+          label="مهارت ها"
+          onChange={handleSkillsChange}
+          value={formData.skills}
           errors={[]}
           name="skills"
         />
         <SelectField
-          options={[
-            { value: "tehran", lable: "تهران" },
-            { value: "shiraz", lable: "شیراز" },
-            { value: "ahvaz", lable: "اهواز" },
-          ]}
-          value="shiraz"
-          onChange={() => {}}
-          lable="شهر محل سکونت"
+          options={citys}
+          value={formData.city}
+          onChange={getChangeHandler("city")}
+          label="شهر محل سکونت"
           errors={[]}
         />
+        <button type="submit">ثبت نام</button>
+        <button type="reset">پاک</button>
       </form>
     </section>
   );

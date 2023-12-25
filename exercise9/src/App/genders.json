@@ -1,0 +1,14 @@
+[
+    {
+        "value": "male",
+        "label": "مرد"
+    },
+    {
+        "value": "female",
+        "label": "زن"
+    },
+    {
+        "value": "prefer-not-to-say",
+        "label": "نامشخص"
+    }
+]
