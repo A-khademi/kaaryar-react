@@ -7,6 +7,12 @@ import { useState } from "react";
 import genders from "./genders.json";
 import citys from "./citys.json";
 import skills from "./skills.json";
+
+const fields={
+  fullName:{
+    validators:[isRequired,isFarsi]
+  }
+}
 function App() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -42,9 +48,18 @@ function App() {
   }
 
   console.log({ formData });
+  function handleSubmit(event){
+    event.preventDefault();
+    console.log('submit');
+
+  }
+  function handleReset(event){
+    event.preventDefault();
+    console.log('reset');
+  }
   return (
     <section className="app">
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit} onReset={handleReset} noValidate>
         <TextField
           label="نام و نام خانوادگی"
           id="fullName"
