@@ -8,7 +8,7 @@ function SelectField({ label, value, onChange, options = [], errors = [] }) {
       <label>{label}</label>
       <select value={value} onChange={handleChange}>
         {options.map((option) => (
-          <option value={option.value}>{option.label}</option>
+          <option key={option.value} value={option.value}>{option.label}</option>
         ))}
       </select>
       {errors.map((error) => (

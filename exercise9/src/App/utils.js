@@ -1,4 +1,27 @@
-function validate (formData) {}
+export function validate (formData,fields) {
+  const formDataEntries=Object.entries(formData);
+  let isValid=true
+  let errors={}
+
+
+  formDataEntries.forEach(([key,value])=>{
+    const validators=fields[key]?.validators||[];
+    const keyErrors=[];
+    validators.forEach((validator)=>{
+      if(validator(formData[key])){
+        keyErrors.push(`error ${validator.name}`)
+      }
+    })
+    errors[key]=keyErrors
+    if(keyErrors.length>=1){
+      isValid=false
+    }
+  })
+  return{
+    isValid,
+    errors
+  }
+}
 
  export function isFarsi (v) {
     const farsiLetters='پچجحخهعغفقثصضشسیبلاتنمکگودذرزطظ'
