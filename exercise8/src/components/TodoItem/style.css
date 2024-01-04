@@ -1,0 +1,35 @@
+.todo__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 8px;
+  height: 32px;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+.todo__item:hover {
+  background-color: #f84546;
+}
+.todo__item:hover .todo__item-text {
+  color: white;
+}
+.todo__item-text {
+  font-size: 16px;
+  transition: color 0.2s ease;
+  max-width: 50%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.todos__remove {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}

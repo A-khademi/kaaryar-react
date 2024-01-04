@@ -1,0 +1,69 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ecf0f1;
+}
+.todos {
+  width: 100%;
+  max-width: 300px;
+  background-color: white;
+  min-height: 450px;
+  max-height: 500px;
+  box-shadow: 0 32px 50px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.todos__list {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.todos__actions {
+  padding: 8px 12px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+.todos__buttons {
+  display: flex;
+  align-items: center;
+}
+.todos__reject {
+  flex-grow: 1;
+  margin-left: 8px;
+  flex-basis: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: #f84546;
+  min-height: 32px;
+  border-radius: 2px;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+.todos__reject:hover {
+  background-color: #f84546;
+  color: white;
+}
+.todos__confirm {
+  flex-grow: 1;
+  flex-basis: 0;
+  cursor: pointer;
+  border: none;
+  background-color: #f84546;
+  color: rgb(255, 255, 255);
+  min-height: 32px;
+  border-radius: 2px;
+  text-align: center;
+}
+.todos__input {
+  outline: none;
+  margin-bottom: 8px;
+}
